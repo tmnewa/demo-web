@@ -1,0 +1,143 @@
+/* line 1, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+input {
+  display: none; }
+
+/* line 13, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.bg {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  z-index: 1; }
+
+/* line 20, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.bg__green {
+  display: none; }
+
+/* line 24, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.block__cloud {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 30vw;
+  background-size: 100% auto;
+  background-repeat: repeat-x;
+  margin: 0; }
+
+/* line 34, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.block__cloud_up {
+  background-image: url("../images/cloud_up.png");
+  top: 4vw;
+  background-position: -50vw 0;
+  animation: animatedBackground_up 100s linear infinite; }
+
+/* line 41, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.block__cloud_down {
+  top: 20vw;
+  background-position: 0px 0px;
+  background-image: url("../images/cloud_down.png");
+  animation: animatedBackground_dowm 300s linear infinite; }
+
+@keyframes animatedBackground_up {
+  from {
+    background-position: -50vw 0; }
+  to {
+    background-position: -100vw 0; } }
+
+@keyframes animatedBackground_dowm {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -100vw 0; } }
+
+/* line 68, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.clock__container {
+  position: absolute;
+  z-index: 2;
+  left: 57.5vw;
+  top: 25.1vw;
+  width: 30.6vw;
+  height: 30.6vw; }
+  /* line 77, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+  .clock__container::before {
+    display: block;
+    content: '';
+    width: 1.1vw;
+    height: 1.1vw;
+    background-color: #1085C6;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1; }
+
+/* line 97, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.hand {
+  position: absolute;
+  left: 50%;
+  background-color: #1085C6;
+  transform-origin: left center;
+  border-radius: 10px; }
+  /* line 103, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+  .hand.hand__seconds {
+    width: 37%;
+    height: 0.3%;
+    top: calc( 50% - 0.3% / 2);
+    transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+  /* line 110, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+  .hand.hand__minute {
+    width: 38%;
+    height: 2%;
+    top: calc( 50% - 2% / 2);
+    border-radius: 10px;
+    transform: rotate(-45deg); }
+  /* line 117, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+  .hand.hand__hour {
+    width: 30%;
+    height: 2%;
+    top: calc( 50% - 2% / 2);
+    transform: rotate(-130deg); }
+
+/* line 125, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.seconds-container {
+  animation: rotate 60s infinite steps(60); }
+
+/* line 129, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+.seconds-container {
+  transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+
+/* line 136, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ .block__cloud_up {
+  background-image: url("../images/cloud_w_up.png"); }
+
+/* line 139, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ .block__cloud_down {
+  background-image: url("../images/cloud_w_down.png"); }
+
+/* line 142, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ .bg__blue {
+  display: none; }
+
+/* line 145, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ .bg__green {
+  display: block; }
+
+/* line 149, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ label .clock__container {
+  left: 58vw;
+  top: 25.1vw;
+  width: 30.6vw;
+  height: 30.6vw; }
+  /* line 154, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+  #switch_style:checked ~ label .clock__container::before {
+    width: 1.1vw;
+    height: 1.1vw;
+    background-color: #5DBE9C; }
+
+/* line 160, /Users/gorewang/Newa/demo-cover/styles/index.scss */
+#switch_style:checked ~ label .hand {
+  background-color: #5DBE9C; }
+
+/*# sourceMappingURL=index.css.map */
