@@ -155,36 +155,36 @@ input {
 
 /* line 176, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ label .clock__container {
-  left: 18vw;
+  left: 58vw;
   top: 25.1vw;
   width: 30.6vw;
   height: 30.6vw; }
-  /* line 181, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+  /* line 183, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
   #switch_style:checked ~ label .clock__container::before {
     width: 1.1vw;
     height: 1.1vw;
     background-color: #5DBE9C; }
 
-/* line 187, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+/* line 189, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ label .hand {
   background-color: #5DBE9C; }
 
-/* line 191, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+/* line 193, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .mask__white {
   animation: white_mask_transition2 0.8s ease-in-out forwards; }
 
-/* line 202, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+/* line 204, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 .container.mode--vh #switch_style:checked ~ label .clock__container {
   left: calc(50vw + 13vh);
   top: 40vh;
   width: 48vh;
   height: 48vh; }
-  /* line 209, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+  /* line 211, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
   .container.mode--vh #switch_style:checked ~ label .clock__container::before {
     width: 2.3vh;
     height: 2.3vh; }
 
-/* line 219, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+/* line 221, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 .mask__white {
   position: fixed;
   top: 0;

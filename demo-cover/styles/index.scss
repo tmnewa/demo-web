@@ -174,7 +174,9 @@ $clock_dot_size_green: 1.1vw;
   }
   &~label {
     .clock__container {
-      left: 18vw;
+//      background-color: red;
+//      opacity: 0.5;
+      left: 58vw;
       top: 25.1vw;
       width: $clock_size_green;
       height: $clock_size_green;
