@@ -179,8 +179,12 @@ input {
   top: 40vh;
   width: 48vh;
   height: 48vh; }
+  /* line 209, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+  .container.mode--vh #switch_style:checked ~ label .clock__container::before {
+    width: 2.3vh;
+    height: 2.3vh; }
 
-/* line 217, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
+/* line 219, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
 .mask__white {
   position: fixed;
   top: 0;

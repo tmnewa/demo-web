@@ -3,7 +3,7 @@ input {
 }
 
 body {
-//  background-color: dimgray
+  //  background-color: dimgray
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
     $clock_size_vh: 49vh;
     $clock_dot_size_vh: 2vh;
     .clock__container {
-      left: calc( 50vw + 12vh );
+      left: calc( 50vw + 12vh);
       top: 40vh;
       width: $clock_size_vh;
       height: $clock_size_vh;
@@ -143,7 +143,7 @@ $hand_width_long: 38%;
   }
   &.hand__hour {
     width: 30%;
-    height: $hand_height; 
+    height: $hand_height;
     top: calc( 50% - #{$hand_height} / 2);
     transform: rotate(-130deg);
   }
@@ -188,33 +188,35 @@ $clock_dot_size_green: 1.1vw;
       background-color: #5DBE9C;
     }
   }
-  &~.mask__white{
+  &~.mask__white {
     animation: white_mask_transition2 0.8s ease-in-out forwards;
   }
 }
 
 .container {
   &.mode--vh {
-    
     #switch_style:checked {
       &~label {
         $clock_size_green_vh: 48vh;
-        .clock__container{
-//          background-color: red;
-//          opacity: 0.5;
+        $clock_dot_size_green_vh: 2.3vh; 
+        .clock__container {
+          //          background-color: red;
+          //          opacity: 0.5;
           left: calc(50vw + 13vh);
           top: 40vh;
           width: $clock_size_green_vh;
           height: $clock_size_green_vh;
+          &::before {
+            width: $clock_dot_size_green_vh;
+            height: $clock_dot_size_green_vh;
+          }
         }
-        
       }
     }
   }
-
 }
 
-.mask__white{
+.mask__white {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,19 +228,20 @@ $clock_dot_size_green: 1.1vw;
   animation: white_mask_transition 0.8s ease-in-out forwards;
 }
 
-@keyframes white_mask_transition{
-  from{
+@keyframes white_mask_transition {
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
-@keyframes white_mask_transition2{
-  from{
+
+@keyframes white_mask_transition2 {
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
