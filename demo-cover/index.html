@@ -2,27 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Just-Sure Cover</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <script src="./index.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Just-Sure Cover</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="./index.js" defer></script>
 </head>
 
 <body>
-    <input type="checkbox" name="switch_style" id="switch_style">
+  <div class="container">
+
+    <input type="checkbox" name="switch_style" id="switch_style" />
     <div class="block__cloud block__cloud_up"></div>
     <div class="block__cloud block__cloud_down"></div>
-    <img class="bg bg__blue" src="./images/bg_blue.png" alt="">
+    <img class="bg bg__blue" src="./images/bg_blue_hr_none.png" alt="">
     <img class="bg bg__green" src="./images/bg_green.png" alt="">
     <label for="switch_style">
-<div class="clock__container">
-    <div id="hand__seconds" class="hand hand__seconds"></div>
-    <div class="hand hand__minute"></div>
-    <div class="hand hand__hour"></div>
-</div>
+      <div class="clock__container">
+          <div id="hand__seconds" class="hand hand__seconds"></div>
+          <div class="hand hand__minute"></div>
+          <div class="hand hand__hour"></div>
+      </div>
     </label>
-
+    <div class="mask__white"></div>
+  </div>
 </body>
 
 </html>
