@@ -112,8 +112,8 @@ input {
   /* line 130, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__seconds {
     width: 37%;
-    height: 0.3%;
-    top: calc( 50% - 0.3% / 2);
+    height: 0.5%;
+    top: calc( 50% - 0.5% / 2);
     transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
   /* line 137, /Users/GoreStarry/Documents/web/tmNewa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__minute {

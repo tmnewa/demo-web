@@ -128,7 +128,7 @@ $hand_width_long: 38%;
   transform-origin: left center;
   border-radius: $hand_radius;
   &.hand__seconds {
-    $hand_seconds_height: 0.3%;
+    $hand_seconds_height: 0.5%;
     width: 37%;
     height: $hand_seconds_height;
     top: calc( 50% - #{$hand_seconds_height} / 2);
