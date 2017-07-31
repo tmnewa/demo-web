@@ -1,48 +1,52 @@
 /* line 1, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 input {
   display: none; }
 
-/* line 9, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 13, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .container {
   background-color: white; }
-  /* line 11, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 15, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .container.mode--vh {
     display: flex;
     flex-direction: row;
     justify-content: center; }
-    /* line 15, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+    /* line 19, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
     .container.mode--vh .bg {
       width: auto;
       height: 100vh; }
-    /* line 19, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+    /* line 23, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
     .container.mode--vh .block__cloud_up {
       top: 6vh; }
-    /* line 22, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+    /* line 26, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
     .container.mode--vh .block__cloud_down {
       top: 29vh; }
-    /* line 27, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+    /* line 31, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
     .container.mode--vh .clock__container {
       left: calc( 50vw + 12vh);
       top: 40vh;
       width: 49vh;
       height: 49vh; }
-      /* line 32, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+      /* line 36, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
       .container.mode--vh .clock__container::before {
         width: 2vh;
         height: 2vh; }
 
-/* line 40, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 44, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .bg {
   width: 100vw;
   height: auto;
   position: relative;
   z-index: 1; }
 
-/* line 47, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 51, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .bg__green {
   display: none; }
 
-/* line 51, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 55, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .block__cloud {
   position: absolute;
   left: 0;
@@ -52,14 +56,14 @@ input {
   background-repeat: repeat-x;
   margin: 0; }
 
-/* line 61, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 65, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .block__cloud_up {
   background-image: url("../images/cloud_up.png");
   top: 4vw;
   background-position: -50vw 0;
   animation: animatedBackground_up 80s linear infinite; }
 
-/* line 68, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 72, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .block__cloud_down {
   top: 20vw;
   background-position: 0px 0px;
@@ -78,7 +82,7 @@ input {
   to {
     background-position: -100vw 0; } }
 
-/* line 95, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 99, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .clock__container {
   position: absolute;
   z-index: 2;
@@ -86,7 +90,7 @@ input {
   top: 25.1vw;
   width: 30.6vw;
   height: 30.6vw; }
-  /* line 104, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 108, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .clock__container::before {
     display: block;
     content: '';
@@ -102,89 +106,90 @@ input {
     margin: auto;
     z-index: 2; }
 
-/* line 124, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 128, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .hand {
   position: absolute;
   left: 50%;
   background-color: #1085C6;
   transform-origin: left center;
   border-radius: 10px; }
-  /* line 130, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 134, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__seconds {
     width: 37%;
     height: 0.8%;
     top: calc( 50% - 0.8% / 2);
     transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
-  /* line 137, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 141, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__minute {
     width: 38%;
     height: 2%;
     top: calc( 50% - 2% / 2);
     border-radius: 10px;
     transform: rotate(-45deg); }
-  /* line 144, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 148, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__hour {
     width: 26%;
     height: 2%;
     top: calc( 50% - 2% / 2);
     transform: rotate(-145deg); }
 
-/* line 152, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 156, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .seconds-container {
   animation: rotate 60s infinite steps(60); }
 
-/* line 156, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 160, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .seconds-container {
   transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
 
-/* line 163, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 167, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .block__cloud_up {
   background-image: url("../images/cloud_w_up.png"); }
 
-/* line 166, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 170, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .block__cloud_down {
   background-image: url("../images/cloud_w_down.png"); }
 
-/* line 169, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 173, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .bg__blue {
   display: none; }
 
-/* line 172, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 176, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .bg__green {
   display: block; }
 
-/* line 176, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 180, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ label .clock__container {
+  cursor: pointer;
   left: 58vw;
   top: 25.1vw;
   width: 30.6vw;
   height: 30.6vw; }
-  /* line 183, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 188, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   #switch_style:checked ~ label .clock__container::before {
     width: 1.1vw;
     height: 1.1vw;
     background-color: #5DBE9C; }
 
-/* line 189, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 194, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ label .hand {
   background-color: #5DBE9C; }
 
-/* line 193, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 198, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 #switch_style:checked ~ .mask__white {
   animation: white_mask_transition2 0.8s ease-in-out forwards; }
 
-/* line 204, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 209, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .container.mode--vh #switch_style:checked ~ label .clock__container {
   left: calc(50vw + 13vh);
   top: 40vh;
   width: 48vh;
   height: 48vh; }
-  /* line 211, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  /* line 216, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .container.mode--vh #switch_style:checked ~ label .clock__container::before {
     width: 2.3vh;
     height: 2.3vh; }
 
-/* line 221, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+/* line 226, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .mask__white {
   position: fixed;
   top: 0;
@@ -207,5 +212,58 @@ input {
     opacity: 1; }
   to {
     opacity: 0; } }
+
+/* line 256, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+#label_open_trailer {
+  background-color: orange;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+  width: 20vw;
+  height: 4vw;
+  left: 40vw;
+  top: 18.5vw;
+  cursor: pointer; }
+
+/* line 268, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+.model_trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: none; }
+  /* line 283, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  .model_trailer .switch_trailer_img img {
+    height: auto;
+    border-radius: 1rem;
+    width: 60vw; }
+
+/* line 292, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+#switch_trailer:checked ~ .model_trailer {
+  opacity: 1;
+  pointer-events: visible; }
+  /* line 295, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+  #switch_trailer:checked ~ .model_trailer .switch_trailer_img {
+    cursor: pointer; }
+
+/* line 303, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+.container.mode--vh #label_open_trailer {
+  width: 35vh;
+  height: 7vh;
+  left: calc(50vw - 17vh);
+  top: 29vh; }
+
+/* line 311, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
+.container.mode--vh .model_trailer .switch_trailer_img img {
+  height: 60vh;
+  width: auto; }
 
 /*# sourceMappingURL=index.css.map */

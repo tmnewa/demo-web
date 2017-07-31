@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 input {
     display: none;
 }
@@ -176,6 +180,7 @@ $clock_dot_size_green: 1.1vw;
         .clock__container {
             //      background-color: red;
             //      opacity: 0.5;
+            cursor: pointer;
             left: 58vw;
             top: 25.1vw;
             width: $clock_size_green;
@@ -245,5 +250,69 @@ $clock_dot_size_green: 1.1vw;
     }
     to {
         opacity: 0;
+    }
+}
+
+#label_open_trailer {
+    background-color: orange;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+    width: 20vw;
+    height: 4vw;
+    left: 40vw;
+    top: 18.5vw;
+    cursor: pointer;
+}
+
+.model_trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    .switch_trailer_img {
+        img {
+            height: auto;
+            border-radius: 1rem;
+            width: 60vw;
+        }
+    }
+}
+
+#switch_trailer:checked {
+    &~.model_trailer {
+        opacity: 1;
+        pointer-events: visible;
+        .switch_trailer_img {
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    &.mode--vh {
+        #label_open_trailer {
+            width: 35vh;
+            height: 7vh;
+            left: calc(50vw - 17vh);
+            top: 29vh;
+        }
+        .model_trailer {
+            .switch_trailer_img {
+                img {
+                    height: 60vh;
+                    width: auto;
+                }
+            }
+        }
     }
 }
