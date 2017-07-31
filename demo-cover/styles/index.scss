@@ -21,7 +21,7 @@ body {
             height: 100vh;
         }
         .block__cloud_up {
-            top: 6vh
+            top: 5vh
         }
         .block__cloud_down {
             top: 29vh;
@@ -66,14 +66,14 @@ body {
     background-image: url("../images/cloud_up.png");
     top: 4vw;
     background-position: -50vw 0;
-    animation: animatedBackground_up 80s linear infinite;
+    animation: animatedBackground_up 90s linear infinite;
 }
 
 .block__cloud_down {
     top: 20vw;
     background-position: 0px 0px;
     background-image: url("../images/cloud_down.png");
-    animation: animatedBackground_dowm 150s linear infinite;
+    animation: animatedBackground_dowm 160s linear infinite;
 }
 
 @keyframes animatedBackground_up {
@@ -81,7 +81,7 @@ body {
         background-position: -50vw 0;
     }
     to {
-        background-position: -100vw 0;
+        background-position: -150vw 0;
     }
 }
 
