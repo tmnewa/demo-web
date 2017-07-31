@@ -142,10 +142,10 @@ $hand_width_long: 38%;
         transform: rotate(-45deg);
     }
     &.hand__hour {
-        width: 30%;
+        width: 26%;
         height: $hand_height;
         top: calc( 50% - #{$hand_height} / 2);
-        transform: rotate(-130deg);
+        transform: rotate(-145deg);
     }
 }
 

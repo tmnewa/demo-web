@@ -124,10 +124,10 @@ input {
     transform: rotate(-45deg); }
   /* line 144, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
   .hand.hand__hour {
-    width: 30%;
+    width: 26%;
     height: 2%;
     top: calc( 50% - 2% / 2);
-    transform: rotate(-130deg); }
+    transform: rotate(-145deg); }
 
 /* line 152, /Users/gorewang/Newa/demo-web/demo-cover/styles/index.scss */
 .seconds-container {
