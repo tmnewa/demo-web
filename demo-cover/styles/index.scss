@@ -1,249 +1,249 @@
 input {
-  display: none;
+    display: none;
 }
 
 body {
-  //  background-color: dimgray
+    //  background-color: dimgray
 }
 
 .container {
-  background-color: white;
-  &.mode--vh {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .bg {
-      width: auto;
-      height: 100vh;
+    background-color: white;
+    &.mode--vh {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .bg {
+            width: auto;
+            height: 100vh;
+        }
+        .block__cloud_up {
+            top: 6vh
+        }
+        .block__cloud_down {
+            top: 29vh;
+        }
+        $clock_size_vh: 49vh;
+        $clock_dot_size_vh: 2vh;
+        .clock__container {
+            left: calc( 50vw + 12vh);
+            top: 40vh;
+            width: $clock_size_vh;
+            height: $clock_size_vh;
+            &::before {
+                width: $clock_dot_size_vh;
+                height: $clock_dot_size_vh;
+            }
+        }
     }
-    .block__cloud_up {
-      top: 6vh
-    }
-    .block__cloud_down {
-      top: 29vh;
-    }
-    $clock_size_vh: 49vh;
-    $clock_dot_size_vh: 2vh;
-    .clock__container {
-      left: calc( 50vw + 12vh);
-      top: 40vh;
-      width: $clock_size_vh;
-      height: $clock_size_vh;
-      &::before {
-        width: $clock_dot_size_vh;
-        height: $clock_dot_size_vh;
-      }
-    }
-  }
 }
 
 .bg {
-  width: 100vw;
-  height: auto;
-  position: relative;
-  z-index: 1;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .bg__green {
-  display: none;
+    display: none;
 }
 
 .block__cloud {
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  height: 30vw;
-  background-size: 100% auto;
-  background-repeat: repeat-x;
-  margin: 0;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 30vw;
+    background-size: 100% auto;
+    background-repeat: repeat-x;
+    margin: 0;
 }
 
 .block__cloud_up {
-  background-image: url("../images/cloud_up.png");
-  top: 4vw;
-  background-position: -50vw 0;
-  animation: animatedBackground_up 80s linear infinite;
+    background-image: url("../images/cloud_up.png");
+    top: 4vw;
+    background-position: -50vw 0;
+    animation: animatedBackground_up 80s linear infinite;
 }
 
 .block__cloud_down {
-  top: 20vw;
-  background-position: 0px 0px;
-  background-image: url("../images/cloud_down.png");
-  animation: animatedBackground_dowm 150s linear infinite;
+    top: 20vw;
+    background-position: 0px 0px;
+    background-image: url("../images/cloud_down.png");
+    animation: animatedBackground_dowm 150s linear infinite;
 }
 
 @keyframes animatedBackground_up {
-  from {
-    background-position: -50vw 0;
-  }
-  to {
-    background-position: -100vw 0;
-  }
+    from {
+        background-position: -50vw 0;
+    }
+    to {
+        background-position: -100vw 0;
+    }
 }
 
 @keyframes animatedBackground_dowm {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -100vw 0;
-  }
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100vw 0;
+    }
 }
 
 $clock_size: 30.6vw;
 $clock_dot_size: 1.1vw;
 .clock__container {
-  //    opacity: 0.5;
-  //    background-color: darkred;
-  position: absolute;
-  z-index: 2;
-  left: 57.5vw;
-  top: 25.1vw;
-  width: $clock_size;
-  height: $clock_size;
-  &::before {
-    display: block;
-    content: '';
-    width: $clock_dot_size;
-    height: $clock_dot_size;
-    background-color: #1085C6;
-    border-radius: 50%;
+    //    opacity: 0.5;
+    //    background-color: darkred;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
-  }
+    z-index: 2;
+    left: 57.5vw;
+    top: 25.1vw;
+    width: $clock_size;
+    height: $clock_size;
+    &::before {
+        display: block;
+        content: '';
+        width: $clock_dot_size;
+        height: $clock_dot_size;
+        background-color: #1085C6;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 2;
+    }
 }
 
 $hand_height: 2%;
 $hand_radius: 10px;
 $hand_width_long: 38%;
 .hand {
-  position: absolute;
-  left: 50%;
-  background-color: #1085C6;
-  transform-origin: left center;
-  border-radius: $hand_radius;
-  &.hand__seconds {
-    $hand_seconds_height: 0.5%;
-    width: 37%;
-    height: $hand_seconds_height;
-    top: calc( 50% - #{$hand_seconds_height} / 2);
-    transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44);
-  }
-  &.hand__minute {
-    width: $hand_width_long;
-    height: $hand_height;
-    top: calc( 50% - #{$hand_height} / 2);
+    position: absolute;
+    left: 50%;
+    background-color: #1085C6;
+    transform-origin: left center;
     border-radius: $hand_radius;
-    transform: rotate(-45deg);
-  }
-  &.hand__hour {
-    width: 30%;
-    height: $hand_height;
-    top: calc( 50% - #{$hand_height} / 2);
-    transform: rotate(-130deg);
-  }
+    &.hand__seconds {
+        $hand_seconds_height: 0.8%;
+        width: 37%;
+        height: $hand_seconds_height;
+        top: calc( 50% - #{$hand_seconds_height} / 2);
+        transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44);
+    }
+    &.hand__minute {
+        width: $hand_width_long;
+        height: $hand_height;
+        top: calc( 50% - #{$hand_height} / 2);
+        border-radius: $hand_radius;
+        transform: rotate(-45deg);
+    }
+    &.hand__hour {
+        width: 30%;
+        height: $hand_height;
+        top: calc( 50% - #{$hand_height} / 2);
+        transform: rotate(-130deg);
+    }
 }
 
 .seconds-container {
-  animation: rotate 60s infinite steps(60);
+    animation: rotate 60s infinite steps(60);
 }
 
 .seconds-container {
-  transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44);
+    transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44);
 }
 
 $clock_size_green: 30.6vw;
 $clock_dot_size_green: 1.1vw;
 #switch_style:checked {
-  &~.block__cloud_up {
-    background-image: url("../images/cloud_w_up.png");
-  }
-  &~.block__cloud_down {
-    background-image: url("../images/cloud_w_down.png");
-  }
-  &~.bg__blue {
-    display: none;
-  }
-  &~.bg__green {
-    display: block;
-  }
-  &~label {
-    .clock__container {
-//      background-color: red;
-//      opacity: 0.5;
-      left: 58vw;
-      top: 25.1vw;
-      width: $clock_size_green;
-      height: $clock_size_green;
-      &::before {
-        width: $clock_dot_size_green;
-        height: $clock_dot_size_green;
-        background-color: #5DBE9C;
-      }
+    &~.block__cloud_up {
+        background-image: url("../images/cloud_w_up.png");
     }
-    .hand {
-      background-color: #5DBE9C;
+    &~.block__cloud_down {
+        background-image: url("../images/cloud_w_down.png");
     }
-  }
-  &~.mask__white {
-    animation: white_mask_transition2 0.8s ease-in-out forwards;
-  }
+    &~.bg__blue {
+        display: none;
+    }
+    &~.bg__green {
+        display: block;
+    }
+    &~label {
+        .clock__container {
+            //      background-color: red;
+            //      opacity: 0.5;
+            left: 58vw;
+            top: 25.1vw;
+            width: $clock_size_green;
+            height: $clock_size_green;
+            &::before {
+                width: $clock_dot_size_green;
+                height: $clock_dot_size_green;
+                background-color: #5DBE9C;
+            }
+        }
+        .hand {
+            background-color: #5DBE9C;
+        }
+    }
+    &~.mask__white {
+        animation: white_mask_transition2 0.8s ease-in-out forwards;
+    }
 }
 
 .container {
-  &.mode--vh {
-    #switch_style:checked {
-      &~label {
-        $clock_size_green_vh: 48vh;
-        $clock_dot_size_green_vh: 2.3vh; 
-        .clock__container {
-          //          background-color: red;
-          //          opacity: 0.5;
-          left: calc(50vw + 13vh);
-          top: 40vh;
-          width: $clock_size_green_vh;
-          height: $clock_size_green_vh;
-          &::before {
-            width: $clock_dot_size_green_vh;
-            height: $clock_dot_size_green_vh;
-          }
+    &.mode--vh {
+        #switch_style:checked {
+            &~label {
+                $clock_size_green_vh: 48vh;
+                $clock_dot_size_green_vh: 2.3vh;
+                .clock__container {
+                    //          background-color: red;
+                    //          opacity: 0.5;
+                    left: calc(50vw + 13vh);
+                    top: 40vh;
+                    width: $clock_size_green_vh;
+                    height: $clock_size_green_vh;
+                    &::before {
+                        width: $clock_dot_size_green_vh;
+                        height: $clock_dot_size_green_vh;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .mask__white {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background-color: dimgray;
-  z-index: 100;
-  animation: white_mask_transition 0.8s ease-in-out forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: dimgray;
+    z-index: 100;
+    animation: white_mask_transition 0.8s ease-in-out forwards;
 }
 
 @keyframes white_mask_transition {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes white_mask_transition2 {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
